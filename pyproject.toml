@@ -1,0 +1,13 @@
+[project]
+name = "data-engineer-training"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "apache-airflow>=3.1.6",
+    "apache-airflow-providers-postgres>=6.5.2",
+    "dbt-postgres>=1.10.0",
+    "pandas>=2.3.3",
+    "psycopg2-binary>=2.9.11",
+]

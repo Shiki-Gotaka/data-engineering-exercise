@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: fact_sales
+    description: Incremental fact table for sales
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+
+      - name: sale_date
+        tests:
+          - not_null
+
+      - name: total_sales
+        tests:
+          - not_null
+
+  - name: stg_sales_data
+    description: Staging layer for sales data
+    columns:
+      - name: id
+        description: Product ID
+        tests:
+          - unique
+          - not_null
+
+  - name: sales_by_category
+    description: Sales aggregated by product category
+    columns:
+      - name: category
+        description: Product category
+        tests:
+          - not_null
