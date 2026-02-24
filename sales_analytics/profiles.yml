@@ -1,0 +1,13 @@
+sales_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: your_password
+      port: 5432
+      dbname: data_engineering_exercise
+      schema: sales_analytics
+      threads: 4
+      keepalives_idle: 0
